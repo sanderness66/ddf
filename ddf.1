@@ -1,0 +1,38 @@
+.TH ddf 1 24-FEB-2026 kozmix.org
+
+.SH NAME
+ddf \- disk free
+
+.SH SYNOPSIS
+.B ddf
+[ filesystem ] ...
+
+.SH DESCRIPTION
+.B ddf
+prints out the amount of free space available on a file system. If the file
+system is unspecified, the free space on all mounted file systems is printed.
+.B ddf
+does its best to only print real filesystems. The default output is in an
+improved Unix 4th Edition format, and the long output (see footnote) in an
+improved 8th Edition format.
+
+.SH OPTIONS
+.B ddf
+takes no options*. Use
+.BR df (1)
+if you need options.
+
+.SH FILES
+Default file systems vary with installation.
+
+.SH SEE ALSO
+.BR df (1)
+
+.SH FOOTNOTES
+* except for -f.
+
+.SH BUGS
+None known.
+
+.SH OWNER
+svm
