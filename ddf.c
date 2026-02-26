@@ -1,6 +1,6 @@
 // DDF.C -- bit like an ancient df
 //
-// svm 23-APR-2022 - 22-FEB-2025
+// svm 23-APR-2022 - 26-FEB-2025
 //
 
 #include <mntent.h>
@@ -67,13 +67,8 @@ base (char *s)
 
     if (*q == '/')
 	q++;
-
-// put something here to turn q="verylonglongname" into "v14e" but smarter, like "veryl*gname"?
-
     return (q);
 }
-
-#define maybe_base(s) (strlen(s) > MPLEN ? base(s) : s)
 
 char *
 typ (char *s)
@@ -86,6 +81,7 @@ typ (char *s)
 	return s;
 }
 
+#define maybe_base(s) (strlen(s) >= MPLEN ? base(s) : s)
 
 void
 prmnt (struct mntent *m)
