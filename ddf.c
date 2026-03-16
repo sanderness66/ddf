@@ -19,7 +19,8 @@
 static int full = 0;
 const char *fmtp = "%-*s %-8s\n";
 const char *fmtf = "%-*s %-*s %-8s %-8s %-8s %-8s %6s\n";
-const char *tavoid[] = { "tmpfs", "devtmpfs", "rootfs", "squashfs", "overlay", "fuse.glusterfs", "efivarfs", "fuse.sshfs", NULL };
+const char *tavoid[] = { "tmpfs", "devtmpfs", "rootfs", "squashfs", "overlay", "fuse.glusterfs", "efivarfs",
+	"fuse.sshfs", "fuse.rclone", NULL };
 const char *mavoid[] = { "/var/snap/", "/var/lib/docker", NULL };
 
 char *
